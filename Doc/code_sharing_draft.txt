@@ -1,0 +1,116 @@
+
+Background
+——————————
+
+Every day individual programmers and teams of software developers are developing, publishing, and releasing software. Some projects are closed private and never shown to the world. Others, started and maintained as publicly available for reading and participating for everyone who decided so. 
+
+There are different reasons to share code - get help from experts, share something unique and get professional opinion, create a new community around the project.
+
+In the last month I’ve talked to number of people around GDS, public sector, and private companies on the subject of open shared code repository. There were different opinions, ideas, and suggestions, but everyone agreed that having maintained good quality publicly available repository of code produced in different parts of government will be beneficial.  There were number of emails sent out to initiate conversations, but not everyone replied. Probably because of other commitments, scepticism, or luck of interest.
+
+
+Current state
+—————————————
+
+Current state of code sharing in government can be described as number of disparate teams working in silos following different standards and practices. There are mature open source projects (GOV.UK) using public GitHub repository, private shared repository with some projects mirrored in public GitHub (MoJ), private repositories used internally (TNA). 
+
+Every team uses tools and libraries they create for their specific projects. There are number of different build and release processes set up around existing code repositories.
+
+
+User needs
+——————————
+
+Potential users of the shared repository are:
+- software developers
+- UI designers
+- architects
+- delivery managers
+
+Following number of interviews and workshop following is a list of identified user needs. Questions asked during interviews are on HackPad (https://codesharing.hackpad.com/#).
+
+  1. User should be able to search and browse all available shared code
+  2. Project owner should be able to create a new project
+  3. Project owner should be able set appropriate access level to created project
+  4. User should be able to submit private repository project  into shared repository.
+  5. System should display content of shared repository by category, language, availability.
+
+
+Initial story cards
+———————————————————
+
+Based on identified user needs following is a list of initial story cards:
+
+  1. Create a new repository.
+  2. Identify set of libraries and tools to host in shared repository
+  3. Create security model.
+  4. Setup security.
+  5. Implement metadata searcher.
+  6. Design and implement  projects’ metadata store.
+  7. Write published shared code guidelines.
+  8. Write published shared code read.me guidelines.
+  9. Create repository UI.
+
+
+Prototypes
+——————————
+
+Several options were tried.
+
+HackPad area with shared space available for joint contributions - links to publicly available projects, shared comments/discussions.
+
+Static web site based on standard GOV.UK template with a list of selected projects. Example of this is already available publicly - http://alphagov.github.io/.
+
+Local GitLab server running on VM or in Docker container.
+
+Different types of shared code:
+
+- library written in specific language
+- web site template
+- project providing self-contained service
+- case study
+- guidance
+
+
+Metadata
+
+- Title
+- Description
+- Contact
+- Department
+- Type
+
+
+Possible scope for alpha
+————————————————————————
+
+There are several possible options to consider.
+
+  1. Shared space on the HackPad, setting up wiki-type workspace. Workspace contains curated list of links to projects hosted in publicly available code repositories with short descriptions and contact information. There’s a list of dedicated users with “contribute” type of access to the HackPad workspace.
+
+  2. Page hosted on GOV.UK with links to publicly available projects. Each project submitted by government department using a form which includes link to a project, description, categories, contact.
+
+  3. Same as above but with added search function. Search function enabled by custom crawler which fetches information from publicly available repositories and stores is in search index.
+
+  4. Public GitHub repository with custom home page (similar to https://code.facebook.com/, http://netflix.github.io/)
+
+  5. Local GitLab server with shared repository.
+
+  6. Guidance for government departments on code sharing practices.
+
+
+Questions raised during interviews
+—————————————————————————————————-
+
+Main concerns and questions raised:
+
+ - who will be responsible for a repository and what these responsibilities are going to be
+ - agreement among all participants on common policies related to maintaining open source repository
+ - recommendations/enforcement/willingness to use available code
+ - possibility to share not just a source code, but a service to avoid duplication
+ - finance aspects - budget, resource allocation, planning.
+
+
+Conclusion
+—————————-
+
+There’s a clear expressed need in shared code repository. However, implementation will require establishing clear guidelines and policies around responsibilities, security, coding guidelines. It will require a team with members from different departments to find, prepare, and publish initial content. This team will establish and lead community of software developers, designers, architects, managers.
