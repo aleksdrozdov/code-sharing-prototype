@@ -1,0 +1,107 @@
+{{<layout}}
+
+{{$pageTitle}}Shared code repository{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+
+  <form action="/" method="post" class="form">
+
+    <h1 class="form-title heading-large">
+      Submit project
+    </h1>
+
+    <div class="form-group">
+      <label class="form-label-bold" for="ni-number">Organisation</label>
+      <input type="text" class="form-control" id="ni-number">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label-bold" for="full-name">Project name</label>
+      <input type="text" class="form-control" id="full-name">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label-bold" for="ni-number">Description</label>
+      <textarea rows="5" cols="50" class="form-control" id="ni-number"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label-bold" for="full-name">Location (URL)</label>
+      <input type="text" class="form-control" id="full-name">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label-bold" for="full-name">Contact name</label>
+      <input type="text" class="form-control" id="full-name">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label-bold" for="full-name">Contact email</label>
+      <input type="text" class="form-control" id="full-name">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label-bold" for="ni-number">Technology</label>
+      <input type="text" class="form-control" id="ni-number">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label-bold" for="ni-number">Category</label>
+      <select class="form-control">
+        <option value="library">Libraries and utilities</option>
+        <option value="library">Templates and styles</option>
+        <option value="library">Guidance</option>
+        <option value="library">Ops</option>
+        <option value="library">Prototype</option>
+        <option value="library">Docker container</option>
+        <option value="library">API</option>
+        <option value="library">Service</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label-bold" for="ni-number">Keywords</label>
+      <input type="text" class="form-control" id="ni-number">
+    </div>
+
+    <div class="form-group">
+      <fieldset>
+        <legend class="form-label-bold">Date created</legend>
+
+        <div class="form-date">
+
+          <div class="form-group form-group-day">
+            <label for="dob-day">Day</label>
+            <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+          </div>
+
+          <div class="form-group form-group-month">
+            <label for="dob-month">Month</label>
+            <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+          </div>
+
+          <div class="form-group form-group-year">
+            <label for="dob-year">Year</label>
+            <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Submit">
+      <ul>
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+
+  </form>
+
+</main>
+
+{{/content}}
+
+{{/layout}}
